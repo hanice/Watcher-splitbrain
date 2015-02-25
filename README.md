@@ -1,5 +1,5 @@
 # About Watcher
-
+ 
 Watcher is a daemon that watches specified files/folders for changes and
 fires commands in response to those changes. It is similar to
 [incron](http://incron.aiken.cz), however, configuration uses a simpler
