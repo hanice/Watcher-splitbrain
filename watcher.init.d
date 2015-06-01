@@ -13,21 +13,21 @@ DESC="Watches specified files/folders for changes"
 NAME="watcher"
 DAEMON="/usr/bin/watcher.py"
 DAEMON_CONFIG="/etc/watcher.ini"
-
+DAEMON_ARGS="-c $DAEMON_CONFIG"
 
 # Exit if the package is not installed
 [ -x "$DAEMON" ] || exit 0
 
 start() {
-    $DAEMON start -c $DAEMON_ARGS
+    $DAEMON start $DAEMON_ARGS
 }
 
 stop() {
-    $DAEMON stop -c $DAEMON_ARGS
+    $DAEMON stop $DAEMON_ARGS
 }
 
 restart() {
-    $DAEMON restart -c $DAEMON_ARGS
+    $DAEMON restart $DAEMON_ARGS
 }
 
 case "$1" in
